@@ -1,0 +1,30 @@
+let smile = 0
+input.onGesture(Gesture.Shake, function () {
+    let mad = 0
+    smile = Math.randomRange(0, 3)
+    if (smile == 0) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+    } else if (mad == 1) {
+        basic.showLeds(`
+            . # . # .
+            . . . . .
+            . # # # .
+            # # # # #
+            # . . . #
+            `)
+    } else {
+        basic.showLeds(`
+            . # . . #
+            # . . # .
+            . . # . .
+            . # . . .
+            # . . . .
+            `)
+    }
+})

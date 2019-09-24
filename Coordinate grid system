@@ -1,0 +1,20 @@
+basic.showString("I Love")
+basic.pause(100)
+led.setBrightness(255)
+basic.showLeds(`
+    . # . # .
+    # # # # #
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+basic.showString("Baseball")
+basic.pause(100)
+led.setBrightness(255)
+basic.showLeds(`
+    . # # # .
+    # # . # #
+    # . # . #
+    # # . # #
+    . # # # .
+    `)

@@ -1,0 +1,43 @@
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(0)
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendNumber(1)
+})
+input.onButtonPressed(Button.AB, function () {
+    radio.sendNumber(2)
+})
+radio.onReceivedNumber(function (receivedNumber) {
+    let receiveNumber = 0
+    if (receiveNumber == 0) {
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # # .
+            . . # . .
+            . . . . .
+            `)
+    } else if (receiveNumber == 1) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . # # # .
+            . . . . .
+            . . . . .
+            `)
+    } else if (receiveNumber == 2) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else {
+        basic.showIcon(IconNames.No)
+    }
+    basic.pause(100)
+    basic.clearScreen()
+})
+radio.setGroup(1)
+basic.showString("morse code")
